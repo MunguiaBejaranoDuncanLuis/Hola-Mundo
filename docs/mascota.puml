@@ -1,0 +1,44 @@
+@startuml
+
+
+class Mascota
+class Alimento
+class Salud
+class Ejercicio
+class Pelota
+class Felicidad
+class Animal
+class Emocion
+class Habitacion
+class Juego
+class Moneda
+class Juguete
+class Tristeza
+class Hambre
+class Limite
+class Espacio
+
+
+Mascota --|>Animal
+Mascota o-- Alimento
+Alimento --|> Salud
+Salud --|> Felicidad
+Ejercicio o-- Salud
+Felicidad --|> Emocion
+Mascota o-- Habitacion
+Juego *-- Mascota
+Juego *-- Moneda
+Mascota o-- Moneda
+Habitacion *-- Juguete
+Mascota *-- Juguete
+Pelota --|> Juguete
+Tristeza --|> Emocion
+Mascota o-- Ejercicio
+Hambre --|> Tristeza
+Mascota o-- Pelota
+Juego *-- Limite
+Limite --|> Espacio
+
+
+
+@enduml

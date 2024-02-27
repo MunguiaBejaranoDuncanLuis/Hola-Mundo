@@ -1,7 +1,11 @@
 @startuml
 
 
-class Mascota
+class Mascota{
+    + Dormir()
+    + Comer()
+    + Cagar()  
+}
 class Alimento
 class Salud
 class Ejercicio
@@ -17,27 +21,37 @@ class Tristeza
 class Hambre
 class Limite
 class Espacio
+class Vestimenta
+class Casa 
+class Ropa 
+class Acsesorios
 
 
-Mascota --|>Animal
-Mascota o-- Alimento
-Alimento --|> Salud
-Salud --|> Felicidad
-Ejercicio o-- Salud
-Felicidad --|> Emocion
-Mascota o-- Habitacion
-Juego *-- Mascota
-Juego *-- Moneda
-Mascota o-- Moneda
-Habitacion *-- Juguete
-Mascota *-- Juguete
-Pelota --|> Juguete
-Tristeza --|> Emocion
-Mascota o-- Ejercicio
-Hambre --|> Tristeza
-Mascota o-- Pelota
-Juego *-- Limite
-Limite --|> Espacio
+Mascota  --|> Animal
+Mascota "1" o-- "*" Alimento
+Alimento  --|>  Salud
+Salud "*" --|> "*" Felicidad
+Ejercicio "*" o-- "*" Salud
+Felicidad  --|> Emocion
+Mascota "1" o-- "5" Habitacion
+Juego "1" *-- "1" Mascota
+Juego "1" *-- "*" Moneda
+Mascota "1" o-- "*" Moneda
+Habitacion "1" *-- "*" Juguete
+Mascota "1" *-- "1" Juguete
+Pelota  --|>  Juguete
+Tristeza  --|>  Emocion
+Mascota "1" o-- "*" Ejercicio
+Hambre  --|>  Tristeza
+Mascota "1" o-- "1" Pelota
+Juego "1" *-- "4" Limite
+Limite  --|>  Espacio
+Juego "1" *-- "1" Casa
+Mascota "1" o-- "1" Casa
+Mascota "1" o-- "*" Vestimenta
+Vestimenta --|> Ropa
+Vestimenta --|> Acsesorios
+
 
 
 

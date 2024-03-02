@@ -3,9 +3,15 @@ using namespace std;
 
 #include <Mascota.hpp>
 #include<Alimento.hpp>
+#include<Dibujo.hpp>
 
 int main(int argc, char const *argv[])
 {
+    Dibujo dibujo("./assets/kenay.txt");
+    Dibujo dibujo2("./assets/koda.txt");
+    dibujo2.Dibujar();
+    dibujo.Dibujar();
+
     Mascota m1;
     Mascota m2;
     Mascota m3;
